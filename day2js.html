@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let a=[12,54,9,9,89,'s',"hello","Java"]
+        // document.write(a[5]+"<br>")
+        // a[3]=78
+        // document.write(a[3]+"<br>")
+
+//          /*
+//         12  54  9  9  89  s  hello  Java
+//          0  1   2  3  4   5   6      7
+         
+//          length=8
+//          index=length-1 ==>8-1==>7
+//          */
+
+        // let a=[]
+        // a[0]=98
+        // a[1]=34
+        // a[2]="java"
+
+        let a=new Array("java",12.6,87,652,655,6)
+        for(let i of a)
+        {
+            document.write(i+"<br>")
+        }
+       
+    </script>
+</body>
+</html>
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a=parseInt(prompt("Enter first number.."))
+        let b=parseInt(prompt("Enter second number.."))
+        let c=prompt("Enter the operator..")
+        switch(c)
+        {
+            case "+":document.write(a+b+"<br>");break
+            case "-":document.write(a-b+"<br>");break
+            case "*":document.write(a*b+"<br>");break
+            case "/":document.write(a/b+"<br>");break
+            default:
+                document.write("invalid operator..")
+        }
+
+    //     for(let i=1;i<=10;i++)
+    // {
+        
+    //     if(i%2==0)
+    // {
+    //     document.write("hello"+"<br>")
+    //     continue
+    // }
+    // document.write(i+"<br>")
+    // }
+        // let a=1
+        // do
+        // {
+        //     document.write(a+"<br>")
+        //     a++
+        // }while(a>10)
+        // /*
+        // do-while syntax
+        // initialization
+        // do
+        // {
+        // //block
+        // inc/dec
+        // }
+        // while(condition);
+        // */
+        // /*
+        // while syntax
+        // initialization1
+        // while(condition)2
+        // {
+        // //block3
+        // // inc/dec4
+        // }
+
+        // let a=1
+        // while(a<=10)
+        // {
+        //     document.write(a+"<br>")
+        //     a++>
+        // }
+
+        //  let a=1
+        // while(a<=10)
+        // {
+        //     a++
+        //     document.write(a+"<br>")
+            
+        // }
+        // /*
+        // a=1  1<=10   1+1=2    2
+        // a=2  2<=10   2+1=3    3
+        // .
+        // .
+        // a=9  9<=10   9+1=10   10
+        // a=10 10<=10 10+1=11   11
+        // a=11  11<=10(false)
+        // */
+
+        // let a=10
+        // while(a>=1)
+        // {
+        //     // a--
+        //     document.write(a+"<br>")
+        //     a--  
+        // }
+    </script>
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        for(initialization;condition;inc/dec)
+        {
+        //block
+        }
+        1.initialization(start)
+        2.condition(stop)
+        3.block
+        4.inc/dec
+        */
+    //    for(let a=1;a<=10;a++)
+    //    {
+    //     document.write(a+"<br>")
+    //    }
+
+    // for(let a=10;a>0;a--)
+    //    {
+    //     document.write(a+"<br>")
+    //    }
+
+    // let x=[12,5,96,3.3,"hello",45]
+    // document.write(typeof(x)+"<br>")
+    // document.write(x+"<br>")
+    // for(let i of x)
+    // {
+    //     document.write(i+"<br>")
+    // }
+
+    // let s={"NAME":"James Gosling","Language":"Java","Year":1995,"Company":"SunMicroSystem"}
+    // document.write(typeof(s)+"<br>")
+    // document.write(s+"<br>")
+    // for(let i in s)
+    // {
+    //     document.write(i+"::"+s[i]+"<br>")
+    // }
+
+    </script>
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <script>
+        // let a=parseInt(prompt("enter the number.."))
+        // if(a!=0)
+        // {
+        //     if(a>0)
+        // {
+        //     document.querySelector("h1").innerHTML="Positive number"
+        // }
+        // else
+        // {
+        //     document.querySelector("h1").innerHTML="Negative number"
+        // }
+        // }
+        // else
+        // {
+        //     document.querySelector("h1").innerHTML="zero"
+        // }
+
+
+        let a=parseInt(prompt("enter the number.."))
+        if(a<12000)
+        {
+            if(a<=2000)
+        {
+            document.querySelector("h1").innerHTML="No discount"
+        }
+        else if(a>2000 && a<=5000)
+        {
+            document.querySelector("h1").innerHTML="10% discount"
+        }
+        else if(a>5000 && a<=8000)
+        {
+            document.querySelector("h1").innerHTML="20% discount"
+        }
+        else
+        {
+            document.querySelector("h1").innerHTML="30% discount"
+        }
+        }
+        else
+        {
+            document.querySelector("h1").innerHTML="50% discount"
+        }
+
+
+
+
+       /*
+       if(condition 1)
+       {
+            if(condition 2)
+            {
+            
+            }
+            else
+            {
+
+            }
+       }
+       else
+       {
+       
+       }
+
+
+    </script>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1 id="a" class="b"></h1>
+    <script>
+        document.write("Hello")
+        // document.getElementById("a").innerHTML="Hello"
+        // document.querySelector("h1").innerHTML="Java"
+        document.querySelector("#a").innerHTML="Java"
+        // document.querySelector(".b").innerHTML="Java"
+    </script>
+</body>
+</html> -->
