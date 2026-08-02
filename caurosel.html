@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+       <button onclick="fun()"><</button>
+       <img id="x" src="" alt="" width="300px" height="300px" >
+       <button onclick="demo()">></button>
+    </div>
+    <script>
+        imag=['10001.jpg','10002.jpg','10003.jpg','10004.jpg','10005.jpg']
+        let a=0
+        document.getElementById("x").src=imag[a]
+        function demo()
+        {
+            a+=1
+            if(a>=imag.length)
+        {
+            a=0
+        }
+         document.getElementById("x").src=imag[a]
+        }
+        setInterval(demo,2000)
+
+         function fun()
+        {
+            a-=1
+            if(a<0)
+        {
+            a=imag.length-1
+        }
+         document.getElementById("x").src=imag[a]
+        }
+    </script>
+</body>
+</html>
