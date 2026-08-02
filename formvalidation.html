@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    
+    <style>
+        * {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+.container {
+    width: 400px;
+    margin: 50px auto;
+    padding: 25px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px gray;
+}
+
+h2 {
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+small {
+    display: block;
+    color: red;
+    margin-top: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#successMessage {
+    color: green;
+    text-align: center;
+}
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Registration Form</h2>
+
+        <form id="registrationForm">
+
+            <label>Name</label>
+            <input type="text" id="name">
+            <small id="nameError"></small>
+
+            <label>Email</label>
+            <input type="email" id="email">
+            <small id="emailError"></small>
+
+            <label>Phone Number</label>
+            <input type="text" id="phone">
+            <small id="phoneError"></small>
+
+            <label>Password</label>
+            <input type="password" id="password">
+            <small id="passwordError"></small>
+
+            <label>Confirm Password</label>
+            <input type="password" id="confirmPassword">
+            <small id="confirmPasswordError"></small>
+
+            <button type="submit">Register</button>
+
+            <p id="successMessage"></p>
+
+        </form>
+    </div>
+<script>
+    let form = document.getElementById("registrationForm");
+
+form.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    // Get values
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let phone = document.getElementById("phone").value.trim();
+    let password = document.getElementById("password").value;
+    let confirmPassword = document.getElementById("confirmPassword").value;
+
+    // Error elements
+    let nameError = document.getElementById("nameError");
+    let emailError = document.getElementById("emailError");
+    let phoneError = document.getElementById("phoneError");
+    let passwordError = document.getElementById("passwordError");
+    let confirmPasswordError = document.getElementById("confirmPasswordError");
+    let successMessage = document.getElementById("successMessage");
+
+    // Clear previous messages
+    nameError.textContent = "";
+    emailError.textContent = "";
+    phoneError.textContent = "";
+    passwordError.textContent = "";
+    confirmPasswordError.textContent = "";
+    successMessage.textContent = "";
+
+    let isValid = true;
+
+    // Name validation
+    if (name === "") {
+        nameError.textContent = "Name is required";
+        isValid = false;
+    }
+
+    // Email validation
+    if (email === "") {
+        emailError.textContent = "Email is required";
+        isValid = false;
+    } 
+    else if (!email.includes("@") || !email.includes(".")) {
+        emailError.textContent = "Enter a valid email";
+        isValid = false;
+    }
+
+    // Phone validation
+    if (phone === "") {
+        phoneError.textContent = "Phone number is required";
+        isValid = false;
+    } 
+    else if (isNaN(phone)) {
+        phoneError.textContent = "Phone number must contain only numbers";
+        isValid = false;
+    } 
+    else if (phone.length !== 10) {
+        phoneError.textContent = "Phone number must be 10 digits";
+        isValid = false;
+    }
+
+    // Password validation
+    if (password === "") {
+        passwordError.textContent = "Password is required";
+        isValid = false;
+    } 
+    else if (password.length < 8) {
+        passwordError.textContent = "Password must contain at least 8 characters";
+        isValid = false;
+    }
+
+    // Confirm password validation
+    if (confirmPassword === "") {
+        confirmPasswordError.textContent = "Please confirm your password";
+        isValid = false;
+    } 
+    else if (password !== confirmPassword) {
+        confirmPasswordError.textContent = "Passwords do not match";
+        isValid = false;
+    }
+
+    // Final result
+    if (isValid) {
+        successMessage.textContent = "Registration successful!";
+        form.reset();
+    }
+
+});
+</script>
+</body>
+</html>
