@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/4.0.0/jquery.min.js"></script>
+</head>
+<body>
+    <h1></h1>
+    <script>
+        document.addEventListener("mousemove",function()
+    {
+        document.querySelector("h1").innerHTML=`X:${event.pageX}   Y:${event.pageY}`
+    })
+    </script>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/4.0.0/jquery.min.js"></script>
+</head>
+<body>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam voluptas hic vel mollitia cumque voluptate eum magnam officiis vitae, deserunt harum saepe aliquid aliquam et pariatur doloremque nobis velit odio reiciendis ex? Eveniet distinctio sapiente assumenda laborum hic illo quod harum cupiditate in ipsa rem corrupti odit nisi ducimus, itaque, eos magni, fugit debitis? Repudiandae excepturi tempore vel deserunt assumenda.</p>
+    <button class="a">slideup</button>
+    <button class="b">slidedown</button>
+    <button class="c">slidetoggle</button>
+    <script>
+        $(".a").click(function()
+    {
+        $("p").slideUp(2000)
+    })
+
+     $(".b").click(function()
+    {
+        $("p").slideDown(2000)
+    })
+
+    $(".c").click(function()
+    {
+        $("p").slideToggle(2000)
+    })
+    </script>
+
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/4.0.0/jquery.min.js"></script>
+     <style>
+        .a
+        {
+            color: brown;
+            background-color: yellow;
+            width: 100px;
+            border: 5px solid black;
+            font-style: italic;
+            letter-spacing: 2px;
+        }
+     </style>
+</head>
+<body>
+    <h1>Hello</h1>
+    <button id="a">ADD</button>
+    <button id="b">REMOVE</button>
+    <button id="c">TOGGLE</button>
+    <h2>Java</h2>
+    <button id="d">CSS</button>
+    <script>
+        $("#a").click(function()
+    {
+        $("h1").addClass("a")
+    })
+
+     $("#b").click(function()
+    {
+        $("h1").removeClass("a")
+    })
+
+     $("#c").click(function()
+    {
+        $("h1").toggleClass("a")
+    })
+
+     $("#d").click(function()
+    {
+        $("h2").css("color","red")
+    })
+    </script>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/4.0.0/jquery.min.js"></script>
+</head>
+<body>
+    <a href="https://cdnjs.com/libraries/jquery">cdnJS</a>
+    <br>
+   <img src="10001.jpg" alt="image not found" width="200px" height="200px">
+   <h1 title="developed by James Gosling">Java</h1>
+   <script>
+    document.write($("a").attr("href")+"<br>")
+    document.write($("img").attr("src")+"<br>")
+    document.write($("img").attr("alt")+"<br>")
+    document.write($("img").attr("width")+"<br>")
+    document.write($("img").attr("height")+"<br>")
+    document.write($("h1").attr("title")+"<br>")
+   </script>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/4.0.0/jquery.min.js"></script>
+</head>
+<body>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae impedit quis ad minima aperiam doloribus atque provident, beatae odit sunt culpa dolore rem eum? <mark>Excepturi totam cupiditate dicta quisquam reprehenderit sit quos quam, incidunt explicabo delectus eum laudantium, quidem ex similique, </mark>blanditiis molestiae sapiente repudiandae aliquid animi amet magni dignissimos.</p>
+    <button class="a">Text</button>
+    <button class="b">Html</button>
+    <br><br>
+    <input type="text">
+    <button id="x">Value</button>
+    <h1></h1>
+    <script>
+        $(".a").click(function()
+    {
+        alert($("p").text())
+    })
+
+     $(".b").click(function()
+    {
+        alert($("p").html())
+    })
+
+     $("#x").click(function()
+    {
+        let m=$("input").val()
+        document.querySelector("h1").innerHTML=m
+    })
+    </script>
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/4.0.0/jquery.min.js"></script>
+</head>
+<body>
+    <h1>Hello</h1>
+    <button class="a">Hide</button>
+    <button class="b">show</button>
+    <button id="x">toggle</button>
+    <script>
+        $(".a").click(function()
+    {
+        $("h1").hide()
+    })
+
+     $(".b").click(function()
+    {
+        $("h1").show()
+    })
+
+    $("#x").click(function()
+{
+    $("h1").toggle()
+})
+
+    </script>
+</body>
+</html> -->
