@@ -1,0 +1,274 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/4.0.0/jquery.min.js"></script>
+</head>
+<body>
+    <h1>Hello</h1>
+    <h2>Java</h2>
+    <h3>Python</h3>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident, cum.</p>
+    <pre>Lorem ipsum dolor sit amet.</pre>
+    <script>
+        // $("h1").siblings().css("color","red")
+        // $("h3").next().css("color","red")
+        // $("h2").nextUntil("pre").css("color","red")
+        // $("h2").prev().css("color","red")
+        // $("p").prevAll().css("color","red")
+        $("p").prevUntil("h1").css("color","red")
+    </script>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/4.0.0/jquery.min.js"></script>
+     <style>
+        div,section,h1,h2
+        {
+            border: 2px solid;
+            margin: 50px;
+        }
+     </style>
+</head>
+<body>
+    <section>
+        <div>
+            <h1>Hello</h1>
+            <h2>Java</h2>
+        </div>
+    </section>
+    <script>
+    //    $("div").children().css("background","lightblue")
+    //    $("section").children().css("background","lightblue")
+       $("section").find("h1").css("background","lightblue")
+    </script>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/4.0.0/jquery.min.js"></script>
+     <style>
+        div,section,h1
+        {
+            border: 2px solid;
+            margin: 50px;
+        }
+     </style>
+</head>
+<body>
+    <section>
+        <div>
+            <h1>Hello</h1>
+        </div>
+    </section>
+    <script>
+        // $("h1").parent().css("background","lightgreen")
+        // $("h1").parents().css("background","lightgreen")
+        $("h1").parentsUntil("body").css("background","lightgreen")
+    </script>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/4.0.0/jquery.min.js"></script>
+     <style>
+        img
+        {
+            border: 6px solid  green;
+        }
+     </style>
+</head>
+<body>
+    <img src="10001.jpg" alt="" width="200px" height="200px">
+    <img src="10002.jpg" alt="" width="200px" height="200px">
+    <img src="10003.jpg" alt="" width="200px" height="200px">
+    <img src="10004.jpg" alt="" width="200px" height="200px">
+    <img src="10005.jpg" alt="" width="200px" height="200px">
+    <br><br>
+
+    <button class="a">First</button>
+    <button class="b">last</button>
+    <button class="c">equal</button>
+    <button class="d">filter</button>
+    <button class="e">not equal</button>
+
+    <script>
+        function demo()
+        {
+           $("img").css("border","6px solid green")
+        }
+        $(".a").click(function()
+    {
+        demo()
+        $("img").first().css("border","6px solid red")
+    })
+
+     $(".b").click(function()
+    {
+        demo()
+        $("img").last().css("border","6px solid red")
+    })
+
+     $(".c").click(function()
+    {
+        demo()
+        $("img").eq("3").css("border","6px solid red")
+    })
+
+     $(".d").click(function()
+    {
+        demo()
+        $("img").filter(":even").css("border","6px solid red")
+    })
+
+     $(".e").click(function()
+    {
+        demo()
+        $("img").not(":eq(3)").css("border","6px solid red")
+    })
+    </script>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/4.0.0/jquery.min.js"></script>
+    <style>
+        div
+        {
+            width: 100px;
+            height: 100px;
+            background-image:url(img.avif);
+            background-position: center;
+            background-size: cover;
+            /* background-color: green; */
+
+        }
+        button
+        {
+            margin-top: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div></div> <br><br>
+
+    <button class="a">show</button>
+    <button class="b">hide</button>
+    <button class="c">toggle</button>
+    <button class="d">stop</button>
+    <script>
+        $(".a").click(function()
+    {
+        $("div").animate({width:"200px",height:"200px",opacity:0.5},5000).show()
+    })
+
+    $(".b").click(function()
+    {
+        $("div").animate({width:"200px",height:"200px",opacity:0.5},5000).hide()
+    })
+
+    $(".c").click(function()
+    {
+        $("div").animate({width:"200px",height:"200px",opacity:0.5},5000).toggle()
+    })
+
+    $(".d").click(function()
+    {
+        $("div").animate().stop()
+    })
+    </script>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/4.0.0/jquery.min.js"></script>
+    <style>
+        .a
+        {
+            width: 100px;
+            height: 200px;
+            border: 2px solid red;
+            border-radius: 50%;
+            background-color: blue;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="a"></div>
+    <script>
+        $(".a").animate(
+        {
+            width:"200px",
+            height:"400px",
+            opacity:0.3
+        },5000)
+        $(".a").animate(
+            {
+               width:"100px",
+               height:"100px",
+               left:"100px"
+            },3000
+        ) 
+
+    </script>
+</body>
+</html>-->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/4.0.0/jquery.min.js"></script>
+    <style>
+        .a
+        {
+            width: 100px;
+            height: 100px;
+            border: 2px solid red;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="a"></div>
+    <script>
+        $(".a").animate(
+        {
+            width:"200px",
+            height:"200px",
+            opacity:0.3
+        })
+    </script>
+</body>
+</html> -->
